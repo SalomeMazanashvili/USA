@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 47% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --cta-gradient: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 76% 36%) 100%);
+    --header-bg: 220 47% 15%;
+    --header-foreground: 0 0% 100%;
+    --service-card-shadow: 0 4px 20px -4px hsla(220, 47%, 11%, 0.12);
+    --service-card-hover-shadow: 0 8px 30px -4px hsla(220, 47%, 11%, 0.2);
+    --whatsapp: 142 70% 49%;
+    --messenger: 214 89% 52%;
+    --phone: 142 71% 45%;
+    --sticky-bar-bg: 220 47% 11%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-georgian antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .cta-button {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95;
+    background: var(--cta-gradient);
+  }
+
+  .cta-button-large {
+    @apply cta-button text-lg px-8 py-4;
+  }
+
+  .service-card {
+    @apply bg-card rounded-xl p-4 transition-all duration-300 cursor-pointer border border-border;
+    box-shadow: var(--service-card-shadow);
+  }
+
+  .service-card:hover {
+    box-shadow: var(--service-card-hover-shadow);
+    @apply -translate-y-1;
+  }
+
+  .service-card-primary {
+    @apply service-card border-2 border-primary/20 bg-gradient-to-br from-card to-primary/5;
+  }
+
+  .sticky-header {
+    @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-md;
+    background: hsla(var(--header-bg) / 0.95);
+  }
+
+  .contact-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-90;
+  }
+
+  .contact-icon-whatsapp {
+    @apply contact-icon bg-[hsl(var(--whatsapp))] text-white;
+  }
+
+  .contact-icon-messenger {
+    @apply contact-icon bg-[hsl(var(--messenger))] text-white;
+  }
+
+  .contact-icon-phone {
+    @apply contact-icon bg-[hsl(var(--phone))] text-white;
+  }
+
+  .nav-dropdown {
+    @apply absolute top-full left-0 right-0 bg-card shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible translate-y-2 transition-all duration-200;
+  }
+
+  .nav-dropdown.open {
+    @apply opacity-100 visible translate-y-0;
+  }
+
+  .sticky-bottom-bar {
+    @apply fixed bottom-0 left-0 right-0 z-50 py-3 px-4 flex items-center justify-around gap-2;
+    background: hsl(var(--sticky-bar-bg));
+  }
+
+  .category-chip {
+    @apply px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200;
+  }
+
+  .category-chip-active {
+    @apply category-chip bg-primary text-primary-foreground;
+  }
+
+  .category-chip-inactive {
+    @apply category-chip bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary;
+  }
+
+  .vacancy-card {
+    @apply bg-card rounded-lg p-4 border border-border shadow-sm;
+  }
+
+  .news-card {
+    @apply bg-card rounded-xl overflow-hidden shadow-sm border border-border transition-all duration-300 hover:shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 80px);
+  }
+
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom, 80px);
+  }
+}

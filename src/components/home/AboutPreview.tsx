@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Phone, MessageCircle, Users } from "lucide-react";
 
-const PHONE_NUMBER = "+1 (555) 123-4567";
+const PHONE_NUMBER = "+1 347 9570185";
 
 const trustPoints = [
   { icon: Users, text: "1000+ კმაყოფილი კლიენტი" },
-  { icon: Shield, text: "გამოცდილება 10+ წელი" },
+  { icon: Shield, text: "გამოცდილება 4+ წელი" },
   { icon: MessageCircle, text: "24/7 მხარდაჭერა" },
 ];
 

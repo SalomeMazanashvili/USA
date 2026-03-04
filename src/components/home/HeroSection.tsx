@@ -3,7 +3,7 @@ import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import heroInterpreter from "@/assets/hero-interpreter.jpg";
 import heroRealestate from "@/assets/hero-realestate.jpg";
 
-const PHONE_NUMBER = "+1 (555) 123-4567";
+const PHONE_NUMBER = "1 347 9570185";
 
 const slides = [
   {
@@ -20,6 +20,12 @@ const slides = [
   },
   {
     id: 3,
+    title: "უძრავი ქონების ყიდვა და გაქირავება",
+    subtitle: "საუკეთესო შეთავაზებები აშშ-ში",
+    image: heroRealestate,
+  },
+  {
+    id: 4,
     title: "უძრავი ქონების ყიდვა და გაქირავება",
     subtitle: "საუკეთესო შეთავაზებები აშშ-ში",
     image: heroRealestate,

@@ -87,7 +87,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-secondary-foreground/10 text-center text-sm text-secondary-foreground/50">
-          © 2024 GeorgiaUSA. ყველა უფლება დაცულია.
+          © 2026 ErtiSivrtse. ყველა უფლება დაცულია.
         </div>
       </div>
     </footer>

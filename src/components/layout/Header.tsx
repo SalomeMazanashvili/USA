@@ -23,13 +23,6 @@ const navItems = [
       { label: "თარჯიმნის მომსახურება", href: "/services/interpreter" },
       { label: "უძრავი ქონების აგენტი", href: "/services/real-estate" },
       { label: "ტაქსების გადახდა", href: "/services/taxes" },
-    ],
-  },
-  {
-    label: "სხვა სერვისები",
-    href: "/other-services",
-    hasDropdown: true,
-    dropdownItems: [
       { label: "ჯარიმების გადახდა", href: "/services/fines" },
       { label: "ავია ბილეთები", href: "/services/tickets" },
       { label: "ავტომობილით მომსახურება", href: "/services/car-service" },
@@ -40,8 +33,8 @@ const navItems = [
   { label: "ჩვენ შესახებ", href: "/about", hasDropdown: false },
 ];
 
-const PHONE_NUMBER = "+1 (555) 123-4567";
-const WHATSAPP_LINK = "https://wa.me/15551234567";
+const PHONE_NUMBER = "+1 347 957 0185";
+const WHATSAPP_LINK = "https://wa.me/3479570185";
 const MESSENGER_LINK = "https://m.me/yourpage";
 
 export const Header = () => {

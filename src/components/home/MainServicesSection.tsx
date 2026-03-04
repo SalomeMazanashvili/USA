@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Languages, Home, Receipt, Phone, ArrowRight } from "lucide-react";
 
-const PHONE_NUMBER = "+1 (555) 123-4567";
+const PHONE_NUMBER = "+1 (347) 957-0185";
 
 const mainServices = [
   {
@@ -27,13 +27,7 @@ const mainServices = [
     icon: Receipt,
     href: "/services/taxes",
   },
-    {
-    id: 4,
-    title: "Sali is the best",
-    description: "სწრაფი და მარტივი ტაქსების მომსახურება",
-    icon: Receipt,
-    href: "/services/sali-is-the-best",
-  },
+  
 ];
 
 export const MainServicesSection = () => {
@@ -47,7 +41,6 @@ export const MainServicesSection = () => {
           </h2>
           <p className="text-sm text-muted-foreground">სწრაფი და პროფესიონალური დახმარება</p>
         </div>
-
         {/* Call button - prominent */}
         <a
           href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
